@@ -18,9 +18,9 @@
 
 @interface RCHttpRequest : NSObject
 @property(nonatomic, strong)NSURLConnection* connection;
-@property(nonatomic,strong) NSMutableData* responseData;
-@property(nonatomic,strong) NSHTTPURLResponse* response;
-@property(nonatomic,assign) NSInteger tag;
+@property(nonatomic, strong) NSMutableData* responseData;
+@property(nonatomic, strong) NSHTTPURLResponse* response;
+@property(nonatomic, assign) NSInteger tag;
 @property(nonatomic, assign) id<HttpConnectionDelegate> httpDelegate;
 
 -(instancetype)init;

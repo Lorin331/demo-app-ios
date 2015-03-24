@@ -19,4 +19,5 @@
 @property (strong, nonatomic) BMKMapManager *mapManager;
 
 @property (strong, nonatomic) NSMutableArray *friendList;
+
 @end

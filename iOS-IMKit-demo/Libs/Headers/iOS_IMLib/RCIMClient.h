@@ -543,6 +543,13 @@
 -(void)setConnectionStatusDelegate:(id<RCConnectionStatusDelegate>)delegate;
 
 /**
+ *  设置重新连接状态变化的监听器。
+ *
+ *  @param delegate 重新连接状态变化的监听器。
+ */
+-(void)setReconnectionStatusDelegate:(id<RCReconnectStatusDelegate>)delegate;
+
+/**
  *  加入聊天室。
  *
  *  @param targetId     聊天室ID。
@@ -617,7 +624,8 @@
  *
  *  @param startTime 关闭起始时间 格式 HH:MM:SS
  *  @param spanMins  间隔分钟数 0 < t < 1440
- *  @param completion 操作回调,status为0表示成功，其它表示失败
+ *  @param SuccessCompletion 成功操作回调,status为0表示成功，其它表示失败
+ *  @param errorCompletion 失败操作回调, 返回相应的错误码
  */
 
 -(void) setConversationNotificationQuietHours:(NSString *) startTime

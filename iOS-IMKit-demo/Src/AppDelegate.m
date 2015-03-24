@@ -12,6 +12,7 @@
 #import "DemoCommonConfig.h"
 #import  <libNBSAppAgent/NBSAppAgent.h>
 
+
 //使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，照成appkey和token不一致
 #define RONGCLOUD_IM_APPKEY    @"e0x9wycfx7flq"
 //使用DEMO注意：更换appkey，一定要更换对应的连接token，如果token未做变化，默认会从融云测试环境获取，照成appkey和token不一致
@@ -24,6 +25,7 @@
     [NBSAppAgent  startWithAppID:@"a546c342ba704acf91b27e9603b6860d"];
     NSString* appKey = [self readAppKeyFromConfig];
     [RCIM initWithAppKey:appKey deviceToken:nil];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     SigninViewController* loginVC = [[SigninViewController alloc] init];
@@ -90,6 +92,37 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = [[RCIM sharedRCIM] getTotalUnreadCount];
+    
+    //勿扰时段内关闭本地通知
+    [[RCIM sharedRCIM] getConversationNotificationQuietHours:^(NSString *startTime, int spansMin) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"HH:mm:ss"];
+        if (startTime && startTime.length != 0) {
+            NSDate *startDate = [dateFormatter dateFromString:startTime];
+            NSDate *endDate = [startDate dateByAddingTimeInterval:spansMin * 60];
+            NSString *nowDateString = [dateFormatter stringFromDate:[NSDate date]];
+            NSDate *nowDate = [dateFormatter dateFromString:nowDateString];
+
+
+            NSDate *earDate = [startDate earlierDate:nowDate];
+            NSDate *laterDate = [endDate laterDate:nowDate];
+            
+            if (([startDate isEqualToDate:earDate] && [endDate isEqualToDate:laterDate]) || [nowDate isEqualToDate:startDate] || [nowDate isEqualToDate:earDate]) {
+                
+                //设置本地通知状态为关闭
+                [[RCIM sharedRCIM] setMessageNotDisturb:YES];
+                
+            }else{
+                
+                [[RCIM sharedRCIM] setMessageNotDisturb:NO];
+            }
+
+        }
+        
+    } errorCompletion:^(RCErrorCode status) {
+        
+    }];
+
     
 }
 
@@ -164,6 +197,7 @@
     if([valueOfKey intValue] == 0)  //开发环境：0 生产环境：1
         appKey = RONGCLOUD_IM_APPKEY;//@"uwd1c0sxdlx91";
     else
+//        appKey = @"3argexb6rnlre";
         appKey = @"z3v5yqkbv8v30";//@"8luwapkvuxvel";
     return appKey;
 }
@@ -177,4 +211,5 @@
 - (void)onGetPermissionState:(int)iError {
     DebugLog(@"百度地图：授权状态 %i", iError);
 }
+
 @end

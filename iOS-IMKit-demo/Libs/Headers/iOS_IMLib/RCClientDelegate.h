@@ -206,6 +206,20 @@
 -(void)responseConnectionStatus:(RCConnectionStatus)status;
 @end
 
+/**
+ *  重新连接状态监听器，以获取连接相关状态。
+ */
+@protocol RCReconnectStatusDelegate <NSObject>
+
+/**
+ *  重新连接状态监听器，以获取连接相关状态。
+ *
+ *  @param status 重新连接状态。
+ */
+-(void)reconnectStatus:(int)status;
+
+@end
+
 
 
 

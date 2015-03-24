@@ -12,6 +12,8 @@
 
 #define DEV_FAKE_SERVER @"http://119.254.110.241:8080/"  //Beijing SUN-QUAN  测试环境（北京）
 #define PRO_FAKE_SERVER @"http://119.254.110.79:8080/"  //Beijing Liu-Bei    线上环境（北京）
+//#define PRO_FAKE_SERVER @"http://119.254.108.131:8080/"  //Beijing Zhang-Fei    线上测试环境（北京）
+
 
 #define RC_APPKEY_CONFIGFILE @"AppKeyConfig"
 

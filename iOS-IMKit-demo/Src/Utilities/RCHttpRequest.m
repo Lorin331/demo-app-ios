@@ -44,18 +44,18 @@ static RCHttpRequest *pDefaultRequest = nil;
     [request setHTTPBody:data];
     self.httpDelegate = delegate;
 	self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+    self.responseData = [[NSMutableData alloc] initWithCapacity:0];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    
     [self.responseData appendData:data];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
 	//if(connection != self.connection) return;
 	self.response = (NSHTTPURLResponse*)response;
-    self.responseData = [[NSMutableData alloc] initWithCapacity:0];
-
-    DebugLog(@"response.statusCode ==> %d",self.response.statusCode);
+    DebugLog(@"response.statusCode ==> %d",(int)self.response.statusCode);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
