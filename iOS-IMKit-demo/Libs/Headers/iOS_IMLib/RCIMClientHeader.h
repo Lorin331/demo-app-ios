@@ -23,5 +23,10 @@
 #import "RCRichContentMessage.h"
 #import "RCDiscussionNotification.h"
 #import "RCLocationMessage.h"
+#import "RCPersonalInfo.h"
+#import "RCAccountInfo.h"
+#import "RCContactInfo.h"
+#import "RCClientInfo.h"
+#import "RCUserData.h"
 
 #endif

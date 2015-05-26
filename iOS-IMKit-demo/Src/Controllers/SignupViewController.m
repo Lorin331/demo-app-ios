@@ -347,7 +347,7 @@
     {
         [MMProgressHUD dismiss];
         DebugLog(@"Connection Result:%@",request.response);
-        [self alertTitle:@"提示" message:[NSString stringWithFormat:@"注册帐号失败 : %d",(int)request.response.statusCode ] delegate:nil cancelBtn:@"确定" otherBtnName:nil];
+        [self alertTitle:@"提示" message:[NSString stringWithFormat:@"此帐号已经被注册" ] delegate:nil cancelBtn:@"确定" otherBtnName:nil];
     }
     
 }

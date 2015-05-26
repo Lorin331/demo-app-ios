@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 extern bool g_bSaveLogToFile;
-
+//#define LOGTOFILE
 #ifndef DEBUG
 #define LOGTOFILE  // 如果在Release下也想输出日志，而不是输出到文件，就可以只注释掉此行代码。
 int SetSaveLogToFileFlag(){return (int)(g_bSaveLogToFile = true);}

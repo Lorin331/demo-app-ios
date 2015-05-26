@@ -481,11 +481,25 @@
             NSLog(@"获取融云sdk token 失败");
             [MMProgressHUD dismiss];
             DebugLog(@"Connection Result:%@",request.response);
-            [self alertTitle:@"提示"
-                     message:@"您的登录帐号不存在，请注册"
-                    delegate:nil
-                   cancelBtn:@"确定"
-                otherBtnName:nil];
+            NSLog(@"网络连接错误返回码 %d",(int)request.response.statusCode);
+            int errorCode =(int)request.response.statusCode;
+            switch (errorCode) {
+                case 401:
+                    [self alertTitle:@"提示"
+                            message:@"密码不正确"
+                          delegate:nil
+                         cancelBtn:@"确定"
+                        otherBtnName:nil];
+                    break;
+                    case 403:
+                    [self alertTitle:@"提示"
+                             message:@"密码不正确"
+                            delegate:nil
+                           cancelBtn:@"确定"
+                        otherBtnName:nil];
+                default:
+                    break;
+            }
         }
 
     }else{

@@ -596,7 +596,7 @@
  *
  *  @param startTime 关闭起始时间 格式 HH:MM:SS
  *  @param spanMins  间隔分钟数 0 < t < 1440
- *  @param SuccessCompletion 成功操作回调,status为0表示成功，其它表示失败
+ *  @param successCompletion 成功操作回调,status为0表示成功，其它表示失败
  *  @param errorCompletion 失败操作回调, 返回相应的错误码
  */
 
