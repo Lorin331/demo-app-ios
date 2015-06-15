@@ -906,7 +906,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c6ed2b03-cecd-44a7-8b9c-d8fd88b1b8f8";
+				PROVISIONING_PROFILE = "74d43786-aad0-4c5d-a7bf-628a5ed4ce81";
 				VALID_ARCHS = "$(inherited)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -941,7 +941,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f9be212-8e1d-401e-ac42-56e8c5285520";
+				PROVISIONING_PROFILE = "5deb5121-c59f-40e3-b198-2bc54229be06";
 				VALID_ARCHS = "$(inherited)";
 				WRAPPER_EXTENSION = app;
 			};
