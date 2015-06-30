@@ -826,8 +826,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Heq. Shinoda (FE84G45QR6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Heq. Shinoda (FE84G45QR6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tom lee (7CARY648RD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tom lee (7CARY648RD)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -842,7 +842,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "21161883-2ec4-480a-afd4-f9d79262cfea";
+				PROVISIONING_PROFILE = "74d43786-aad0-4c5d-a7bf-628a5ed4ce81";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
@@ -860,8 +860,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Feinno Communication Tech Co. Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Feinno Communication Tech Co. Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rong Cloud Network Technology CO., LTD";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rong Cloud Network Technology CO., LTD";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -870,7 +870,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "CFE5D2E7-E15A-4D4A-9B31-05C78CEF4FDE";
+				PROVISIONING_PROFILE = "5deb5121-c59f-40e3-b198-2bc54229be06";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
@@ -885,8 +885,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: peter miao (5TLKDFLPD2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: peter miao (5TLKDFLPD2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tom lee (7CARY648RD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tom lee (7CARY648RD)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/iOS-IMKit-demo/nbs-newlens-ios";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
